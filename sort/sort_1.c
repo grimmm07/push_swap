@@ -81,6 +81,8 @@ void	main_sort(t_stack **stack_a, t_stack **stack_b)
 		sort_4(stack_a, stack_b);
 	else if (linkedlist_size(stack_a) == 5)
 		sort_5(stack_a, stack_b);
+	else if (linkedlist_size(stack_a) <= 6)
+		sort_6(stack_a, stack_b);
 
 	indexing(stack_a);
 }

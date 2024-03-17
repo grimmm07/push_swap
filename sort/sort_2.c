@@ -15,3 +15,8 @@ void	sort_5_extra(t_stack **stack_a, t_stack **stack_b)
 		pa(stack_a, stack_b);
 	}
 }
+
+void	sort_6(t_stack **stack_a, t_stack **stack_b)
+{
+	
+}
