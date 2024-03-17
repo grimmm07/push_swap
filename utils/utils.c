@@ -48,7 +48,8 @@ int	check_digit(char *arr)
 	index = 0;
 	while (arr[index])
 	{
-		if ((arr[index] != '-' && arr[index] != '+') && ft_isdigit(arr[index]) == 0)
+		if ((arr[index] != '-' && arr[index] != '+')
+			&& ft_isdigit(arr[index]) == 0)
 			return (0);
 		index++;
 	}
