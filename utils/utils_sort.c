@@ -22,23 +22,24 @@ int *conv_linkto_arr(t_stack **stack_a)
 int *sort_arr(int *arr, int index)
 {
     int y;
+    int i;
     int tmp;
 
-    while (index > 0)
+    while (i < index)
     {
-        y = index + 1;
+        y = i + 1;
         while (y > 0)
         {
             if (arr[index] > arr[y])
             {
                 tmp = arr[index];
-                printf()
+                
                 arr[index] = arr[y];
                 arr[y] = arr[index];
             }
-            y--;
+            y++;
         }
-        index--;
+        i++;
     }
     return (arr);
 }

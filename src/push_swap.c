@@ -19,7 +19,7 @@ int	main(int ac, char **av)
 	main_sort(&a, &b);
 	arr = conv_linkto_arr(&a);
 	int index = 0;
-	while (index < 4)
+	while (index < 5)
 	{
 		printf("%d \n", arr[index]);
 		index++;
