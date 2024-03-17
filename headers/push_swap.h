@@ -43,6 +43,7 @@ int					is_sorted(t_stack **stack_a);
 void				indexing(t_stack **lst);
 int					look_for_themax(t_stack **lst);
 int					look_for_themin(t_stack **lst);
+void				themin_to_thetop(t_stack **stack_a, t_stack **stack_b);
 
 // linkedlist
 t_stack				**ft_lstadd_front(t_stack **lst, int content);
@@ -53,6 +54,6 @@ void				main_sort(t_stack **stack_a, t_stack **stack_b);
 void				sort_2(t_stack **stack);
 void				sort_3(t_stack **stack);
 void				sort_4(t_stack **stack_a, t_stack **stack_b);
-void				themin_to_thetop(t_stack **stack_a, t_stack **stack_b);
+void				sort_5_extra(t_stack **stack_a, t_stack **stack_b);
 
 #endif

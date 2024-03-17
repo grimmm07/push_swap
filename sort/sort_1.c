@@ -50,7 +50,13 @@ void	sort_4(t_stack **stack_a, t_stack **stack_b)
 
 void	sort_5(t_stack **stack_a, t_stack **stack_b)
 {
-	if (look_for_themin(stack_a) == 1)
+	if (look_for_themin(stack_a) == 0)
+	{
+		pb(stack_a, stack_b);
+		sort_4(stack_a, stack_b);
+		pa(stack_a, stack_b);
+	}
+	else if (look_for_themin(stack_a) == 1)
 	{
 		themin_to_thetop(stack_a, stack_b);
 		sort_4(stack_a, stack_b);
@@ -62,18 +68,7 @@ void	sort_5(t_stack **stack_a, t_stack **stack_b)
 		sort_4(stack_a, stack_b);
 		pa(stack_a, stack_b);
 	}
-	else if (look_for_themin(stack_a) == 3)
-	{
-		themin_to_thetop(stack_a, stack_b);
-		sort_4(stack_a, stack_b);
-		pa(stack_a, stack_b);
-	}
-	else if (look_for_themin(stack_a) == 0)
-	{
-		pb(stack_a, stack_b);
-		sort_4(stack_a, stack_b);
-		pa(stack_a, stack_b);
-	}
+	sort_5_extra(stack_a, stack_b);
 }
 
 void	main_sort(t_stack **stack_a, t_stack **stack_b)
