@@ -46,7 +46,8 @@ int					look_for_themin(t_stack **lst);
 void				themin_to_thetop(t_stack **stack_a, t_stack **stack_b);
 
 // utils_sort
-int *conv_linkto_arr(t_stack **stack_a);
+int					*conv_linkto_arr(t_stack **stack_a);
+int					*sort_arr(int *arr, int index);
 
 // linkedlist
 t_stack				**ft_lstadd_front(t_stack **lst, int content);

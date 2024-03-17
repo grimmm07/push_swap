@@ -18,6 +18,12 @@ int	main(int ac, char **av)
 		return (0);
 	main_sort(&a, &b);
 	arr = conv_linkto_arr(&a);
+	int index = 0;
+	while (index < 4)
+	{
+		printf("%d \n", arr[index]);
+		index++;
+	}
 	while (a)
 	{
 		printf("val---> %d || index----> %d\n", (a)->val, a->index);

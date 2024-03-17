@@ -18,5 +18,8 @@ void	sort_5_extra(t_stack **stack_a, t_stack **stack_b)
 
 void	sort_6(t_stack **stack_a, t_stack **stack_b)
 {
+	int *arr;
+
+	arr = conv_linkto_arr(stack_a);
 	
 }
