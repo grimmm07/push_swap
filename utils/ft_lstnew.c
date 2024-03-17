@@ -8,5 +8,5 @@ t_stack	*ft_lstnew(int content)
 	new_node = (t_stack *)malloc(sizeof(t_stack));
 	new_node->val = content;
 	new_node->next = NULL;
-    return (new_node);
+	return (new_node);
 }
