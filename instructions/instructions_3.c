@@ -16,6 +16,7 @@ void	rra(t_stack **stack_a)
 	tmp_newl->next = NULL;
 	tmp_last->next = *stack_a;
 	*stack_a = tmp_last;
+	indexing(stack_a);
 }
 
 void	rrb(t_stack **stack_b)
@@ -34,6 +35,7 @@ void	rrb(t_stack **stack_b)
 	tmp_newl->next = NULL;
 	tmp_last->next = *stack_b;
 	*stack_b = tmp_last;
+	indexing(stack_b);
 }
 
 void	rrr(t_stack **stack_a, t_stack **stack_b)

@@ -15,7 +15,7 @@ int main(int ac, char **av)
     arg_split(ac, av, &a);
     tmp = a;
     if (parsing(a) == 0)
-        return (0);
+        return (0); 
     main_sort(&a, &b);
     while (a)
     {

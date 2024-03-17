@@ -37,10 +37,15 @@ void	ss(t_stack **stack_a, t_stack **stack_b)
 void	pa(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack *new;
+	t_stack *tmp;
 
+	tmp = (*stack_b);
 	new = ft_lstnew((*stack_b)->val);
 	new->next = (*stack_a);
 	(*stack_a) = new;
+	(*stack_b) = (*stack_a)->next;
+	indexing(stack_b);
+	free(tmp);
 }
 
 void	pb(t_stack **stack_a, t_stack **stack_b)
