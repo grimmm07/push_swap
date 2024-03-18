@@ -62,4 +62,6 @@ void				sort_4(t_stack **stack_a, t_stack **stack_b);
 void				sort_5_extra(t_stack **stack_a, t_stack **stack_b);
 void				sort_prime(t_stack **stack_a, t_stack **stack_b);
 
+void	print_stack(t_stack *a);
+
 #endif
