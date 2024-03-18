@@ -45,7 +45,6 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 	new->next = (*stack_a);
 	(*stack_a) = new;
 	(*stack_b) = (*stack_b)->next;
-	indexing(stack_b);
 	// free(tmp);
 }
 
@@ -59,6 +58,5 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 	new->next = (*stack_b);
 	(*stack_b) = new;
 	(*stack_a) = (*stack_a)->next;
-	indexing(stack_a);
 	// free(tmp);
 }

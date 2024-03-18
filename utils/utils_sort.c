@@ -50,7 +50,9 @@ int	get_range(t_stack **stack_a)
 	size = linkedlist_size(stack_a);
 	if (size >= 6 && size <= 16)
 		return (3);
-	else if (size > 100 && size <= 500)
+	else if (size <= 100)
+		return (15);
+	else if (size <= 500)
 		return (45);
 	else
 		return (50);
@@ -72,19 +74,15 @@ void	get_chunk(t_stack **stack_a, t_stack **stack_b, int *arr)
 
 	start = 0;
 	size_arr = linkedlist_size(stack_a);
-	end = get_range(stack_a);
-	for (int i = 0;i <= 6;i++)
-	{
-		printf("arr[%d] => %d\n",i,arr[i]);
-	}
+	end = get_range(stack_a) - 1;
 	while ((*stack_a))
 	{
-		// printf("------>start %d ----> end %d \n", start, end);
 		if ((*stack_a)->val <= arr[start])
 		{
 			printf("pb \nrb\n");
 			pb(stack_a, stack_b);
-			rb(stack_b);
+			if (linkedlist_size(stack_b) >= 2)
+				rb(stack_b);
 			increment(&start, &end, size_arr);
 		}
 		else if ((*stack_a)->val <= arr[end])
@@ -97,9 +95,9 @@ void	get_chunk(t_stack **stack_a, t_stack **stack_b, int *arr)
 		}
 		else
 		{
-			printf("ana hna");
+			printf("ra \n");
 			ra(stack_a);
 		}
-			
 	}
+	indexing(stack_b);
 }
