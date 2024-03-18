@@ -43,26 +43,56 @@ int	*sort_arr(int *arr, int index)
 	return (arr);
 }
 
-int	get_chunk(t_stack **stack_a, int *arr)
+int	get_range(t_stack **stack_a)
 {
-	int		i;
-	int		j;
-	int		y;
-	t_stack	*tmp;
+	int	size;
 
-	i = 0;
+	size = linkedlist_size(stack_a);
+	if (size >= 6 && size <= 100)
+		return (15);
+	else if (size > 100 && size <= 500)
+		return (45);
+	else
+		return (50);
+}
+
+void	increment(int *start, int *end, int *size_arr)
+{
+	if ((*start) < (*end))
+		(*start)++;
+	(*start)++;
+	if (end < size_arr - 1)
+		end++;
+}
+
+void	get_chunk(t_stack **stack_a, t_stack **stack_b, int *arr)
+{
+	int		start;
+	int		end;
+	t_stack	*tmp;
+	int		size_arr;
+
+	start = 0;
+	size_arr = linkedlist_size(stack_a);
 	tmp = *stack_a;
-	j = i + 2;
-	y = 0;
-	while (i <= linkedlist_size(stack_a) && y < 3)
+	end = get_range(stack_a) - 1;
+	while (tmp)
 	{
-		if (tmp->val == arr[i])
-			return (1);
-		tmp = tmp->next;
-		if (linkedlist_size(stack_a) != y)
-			i++;
+		if (tmp->val <= arr[start])
+		{
+			pb(stack_a, stack_b);
+			rb(stack_b);
+			increment(&start, &end, &size_arr);
+		}
+		else if (tmp->val <= arr[end])
+		{
+			pb(stack_a, stack_b);
+			if ((*stack_b)->val < (*stack_b)->next->val)
+				sb(stack_b);
+			increment(&start, &end, &size_arr);
+		}
 		else
-			i--;
+			ra(stack_a);
+		tmp = tmp->next;
 	}
-	return (0);
 }
