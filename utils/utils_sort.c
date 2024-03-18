@@ -60,7 +60,7 @@ void	increment(int *start, int *end, int size_arr)
 {
 	if ((*start) < (*end))
 		(*start)++;
-	if (*end <= size_arr - 1)
+	if ((*end) < size_arr - 1)
 		(*end)++;
 }
 
@@ -68,32 +68,38 @@ void	get_chunk(t_stack **stack_a, t_stack **stack_b, int *arr)
 {
 	int		start;
 	int		end;
-	t_stack	*tmp;
 	int		size_arr;
 
 	start = 0;
 	size_arr = linkedlist_size(stack_a);
-	tmp = *stack_a;
 	end = get_range(stack_a);
+	for (int i = 0;i <= 6;i++)
+	{
+		printf("arr[%d] => %d\n",i,arr[i]);
+	}
 	while ((*stack_a))
 	{
-		if (tmp->val <= arr[start])
+		// printf("------>start %d ----> end %d \n", start, end);
+		if ((*stack_a)->val <= arr[start])
 		{
+			printf("pb \nrb\n");
 			pb(stack_a, stack_b);
 			rb(stack_b);
 			increment(&start, &end, size_arr);
 		}
-		else if (tmp->val <= arr[end])
+		else if ((*stack_a)->val <= arr[end])
 		{
 			pb(stack_a, stack_b);
+			printf("pb\n");
 			if (linkedlist_size(stack_b) >= 2 && (*stack_b)->val < (*stack_b)->next->val)
-			{
-				printf("---> %d ----->stack val %d", arr[end], (*stack_b)->val);
 				sb(stack_b);
-			}
 			increment(&start, &end, size_arr);
 		}
 		else
+		{
+			printf("ana hna");
 			ra(stack_a);
+		}
+			
 	}
 }
