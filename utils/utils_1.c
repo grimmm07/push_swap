@@ -75,3 +75,18 @@ int	is_sorted(t_stack **stack_a)
 	}
 	return (1);
 }
+
+void	indexing(t_stack **lst)
+{
+	t_stack	*tmp;
+	int		indice;
+
+	tmp = *lst;
+	indice = 0;
+	while (tmp)
+	{
+		tmp->index = indice;
+		tmp = tmp->next;
+		indice++;
+	}
+}

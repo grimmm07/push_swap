@@ -1,20 +1,5 @@
 #include "../headers/push_swap.h"
 
-void	indexing(t_stack **lst)
-{
-	t_stack	*tmp;
-	int		indice;
-
-	tmp = *lst;
-	indice = 0;
-	while (tmp)
-	{
-		tmp->index = indice;
-		tmp = tmp->next;
-		indice++;
-	}
-}
-
 int	look_for_themin(t_stack **lst)
 {
 	t_stack	*head;
