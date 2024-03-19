@@ -53,7 +53,7 @@ int	get_range(t_stack **stack_a)
 	else if (size <= 100)
 		return (15);
 	else if (size <= 500)
-		return (35);
+		return (45);
 	else
 		return (50);
 }
@@ -95,5 +95,6 @@ void	get_chunk(t_stack **stack_a, t_stack **stack_b, int *arr)
 		else
 			ra(stack_a);
 	}
+	
 	indexing(stack_b);
 }

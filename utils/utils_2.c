@@ -38,10 +38,11 @@ int	look_for_themin(t_stack **lst)
 	return (indice);
 }
 
-int	look_for_themax(t_stack **lst, int *indice)
+int	look_for_themax_indice(t_stack **lst)
 {
 	t_stack *head;
 	t_stack *tmp;
+	int indice;
 	int max;
 
 	head = *lst;
@@ -52,7 +53,29 @@ int	look_for_themax(t_stack **lst, int *indice)
 		if (head->val > max)
 		{
 			max = head->val;
-			indice = &(head->index);
+			indice = head->index;
+		}
+		head = head->next;
+	}
+	return (indice);
+}
+
+int	look_for_themax(t_stack **lst)
+{
+	t_stack *head;
+	t_stack *tmp;
+	int max;
+	int indice;
+
+	head = *lst;
+	max = 0;
+	indice = 0;
+	while (head)
+	{
+		if (head->val > max)
+		{
+			max = head->val;
+			indice = head->index;
 		}
 		head = head->next;
 	}

@@ -7,7 +7,7 @@ void	sa(t_stack **stack_a)
 
 	if (linkedlist_size(stack_a) >= 2)
 	{
-		printf("sa");
+		printf("sa\n");
 		tmp = (*stack_a)->val;
 		(*stack_a)->val = (*stack_a)->next->val;
 		(*stack_a)->next->val = tmp;
@@ -20,7 +20,7 @@ void	sb(t_stack **stack_b)
 
 	if (linkedlist_size(stack_b) >= 2)
 	{
-		printf("sb");
+		printf("sb\n");
 		tmp = (*stack_b)->val;
 		(*stack_b)->val = (*stack_b)->next->val;
 		(*stack_b)->next->val = tmp;
