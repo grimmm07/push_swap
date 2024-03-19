@@ -22,4 +22,5 @@ void	sort_prime(t_stack **stack_a, t_stack **stack_b)
 
 	arr = conv_linkto_arr(stack_a);
 	get_chunk(stack_a, stack_b, arr);
+	sort_stack(stack_a, stack_b);
 }

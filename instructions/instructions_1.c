@@ -7,6 +7,7 @@ void	sa(t_stack **stack_a)
 
 	if (linkedlist_size(stack_a) >= 2)
 	{
+		printf("sa");
 		tmp = (*stack_a)->val;
 		(*stack_a)->val = (*stack_a)->next->val;
 		(*stack_a)->next->val = tmp;
@@ -19,6 +20,7 @@ void	sb(t_stack **stack_b)
 
 	if (linkedlist_size(stack_b) >= 2)
 	{
+		printf("sb");
 		tmp = (*stack_b)->val;
 		(*stack_b)->val = (*stack_b)->next->val;
 		(*stack_b)->next->val = tmp;
@@ -29,6 +31,7 @@ void	ss(t_stack **stack_a, t_stack **stack_b)
 {
 	if (linkedlist_size(stack_a) >= 2 && linkedlist_size(stack_b) >= 2)
 	{
+		printf("ss\n");
 		sa(stack_a);
 		sb(stack_b);
 	}
@@ -39,7 +42,9 @@ void	pa(t_stack **stack_a, t_stack **stack_b)
 	t_stack *new;
 	t_stack *tmp;
 
-	
+	printf("pa\n");
+	if (!(*stack_b) || stack_b == NULL)
+		return;
 	tmp = (*stack_b);
 	new = ft_lstnew((*stack_b)->val);
 	new->next = (*stack_a);
@@ -53,6 +58,7 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 	t_stack *new;
 	t_stack *tmp;
 
+	printf("pb\n");
 	tmp = (*stack_a);
 	new = ft_lstnew((*stack_a)->val);
 	new->next = (*stack_b);

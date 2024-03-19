@@ -24,5 +24,4 @@ int	main(int ac, char **av)
 	if (parsing(a) == 0)
 		return (0);
 	main_sort(&a, &b);
-	print_stack(b);
 }

@@ -53,7 +53,7 @@ int	get_range(t_stack **stack_a)
 	else if (size <= 100)
 		return (15);
 	else if (size <= 500)
-		return (45);
+		return (35);
 	else
 		return (50);
 }
@@ -68,9 +68,9 @@ void	increment(int *start, int *end, int size_arr)
 
 void	get_chunk(t_stack **stack_a, t_stack **stack_b, int *arr)
 {
-	int		start;
-	int		end;
-	int		size_arr;
+	int	start;
+	int	end;
+	int	size_arr;
 
 	start = 0;
 	size_arr = linkedlist_size(stack_a);
@@ -79,7 +79,6 @@ void	get_chunk(t_stack **stack_a, t_stack **stack_b, int *arr)
 	{
 		if ((*stack_a)->val <= arr[start])
 		{
-			printf("pb \nrb\n");
 			pb(stack_a, stack_b);
 			if (linkedlist_size(stack_b) >= 2)
 				rb(stack_b);
@@ -88,16 +87,13 @@ void	get_chunk(t_stack **stack_a, t_stack **stack_b, int *arr)
 		else if ((*stack_a)->val <= arr[end])
 		{
 			pb(stack_a, stack_b);
-			printf("pb\n");
-			if (linkedlist_size(stack_b) >= 2 && (*stack_b)->val < (*stack_b)->next->val)
+			if (linkedlist_size(stack_b) >= 2
+				&& (*stack_b)->val < (*stack_b)->next->val)
 				sb(stack_b);
 			increment(&start, &end, size_arr);
 		}
 		else
-		{
-			printf("ra \n");
 			ra(stack_a);
-		}
 	}
 	indexing(stack_b);
 }

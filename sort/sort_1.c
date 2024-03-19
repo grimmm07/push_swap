@@ -3,15 +3,18 @@
 
 void	sort_2(t_stack **stack)
 {
-	if (look_for_themax(stack) == 0)
+	int index;
+	if (look_for_themax(stack, &index) == 0)
 		sa(stack);
 }
 
 void	sort_3(t_stack **stack)
 {
-	if (look_for_themax(stack) == 0)
+	int index;
+
+	if (look_for_themax(stack, &index) == 0)
 		ra(stack);
-	if (look_for_themax(stack) == 1)
+	if (look_for_themax(stack, &index) == 1)
 	{
 		sa(stack);
 		ra(stack);

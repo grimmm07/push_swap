@@ -41,7 +41,7 @@ int					is_sorted(t_stack **stack_a);
 
 // utils_2
 void				indexing(t_stack **lst);
-int					look_for_themax(t_stack **lst);
+int					look_for_themax(t_stack **lst, int *indice);
 int					look_for_themin(t_stack **lst);
 void				themin_to_thetop(t_stack **stack_a, t_stack **stack_b);
 
@@ -49,6 +49,9 @@ void				themin_to_thetop(t_stack **stack_a, t_stack **stack_b);
 int					*conv_linkto_arr(t_stack **stack_a);
 int					*sort_arr(int *arr, int index);
 void				get_chunk(t_stack **stack_a, t_stack **stack_b, int *arr);
+
+//	utils_sort_2
+void				sort_stack(t_stack **stack_a, t_stack **stack_b);
 
 // linkedlist
 t_stack				**ft_lstadd_front(t_stack **lst, int content);
@@ -62,6 +65,6 @@ void				sort_4(t_stack **stack_a, t_stack **stack_b);
 void				sort_5_extra(t_stack **stack_a, t_stack **stack_b);
 void				sort_prime(t_stack **stack_a, t_stack **stack_b);
 
-void	print_stack(t_stack *a);
+void				print_stack(t_stack *a);
 
 #endif

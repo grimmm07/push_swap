@@ -6,6 +6,7 @@ void	rra(t_stack **stack_a)
 	t_stack	*tmp_head;
 	t_stack	*tmp_newl;
 
+	printf("rra\n");
 	tmp_head = *stack_a;
 	tmp_last = *stack_a;
 	while (tmp_last->next)
@@ -25,6 +26,7 @@ void	rrb(t_stack **stack_b)
 	t_stack	*tmp_head;
 	t_stack	*tmp_newl;
 
+	printf("rrb\n");
 	tmp_head = *stack_b;
 	tmp_last = *stack_b;
 	while (tmp_last->next)
@@ -40,6 +42,7 @@ void	rrb(t_stack **stack_b)
 
 void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
+	printf("rrr\n");
 	rra(stack_a);
 	rrb(stack_b);
 }
