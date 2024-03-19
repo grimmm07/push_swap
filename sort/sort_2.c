@@ -18,7 +18,7 @@ void	sort_5_extra(t_stack **stack_a, t_stack **stack_b)
 
 void	sort_prime(t_stack **stack_a, t_stack **stack_b)
 {
-	int *arr;
+	int	*arr;
 
 	arr = conv_linkto_arr(stack_a);
 	get_chunk(stack_a, stack_b, arr);

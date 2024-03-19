@@ -1,10 +1,9 @@
 #include "../headers/push_swap.h"
 
-
 void	ra(t_stack **stack_a)
 {
-	t_stack *last;
-	t_stack *tmp;
+	t_stack	*last;
+	t_stack	*tmp;
 
 	printf("ra\n");
 	tmp = (*stack_a)->next;
@@ -18,8 +17,8 @@ void	ra(t_stack **stack_a)
 
 void	rb(t_stack **stack_b)
 {
-	t_stack *last;
-	t_stack *tmp;
+	t_stack	*last;
+	t_stack	*tmp;
 
 	printf("rb\n");
 	tmp = (*stack_b)->next;

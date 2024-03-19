@@ -1,9 +1,8 @@
 #include "../headers/push_swap.h"
 
-
 void	sa(t_stack **stack_a)
 {
-	int tmp;
+	int	tmp;
 
 	if (linkedlist_size(stack_a) >= 2)
 	{
@@ -16,7 +15,7 @@ void	sa(t_stack **stack_a)
 
 void	sb(t_stack **stack_b)
 {
-	int tmp;
+	int	tmp;
 
 	if (linkedlist_size(stack_b) >= 2)
 	{
@@ -39,24 +38,23 @@ void	ss(t_stack **stack_a, t_stack **stack_b)
 
 void	pa(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *new;
-	t_stack *tmp;
+	t_stack	*new;
+	t_stack	*tmp;
 
 	printf("pa\n");
 	if (!(*stack_b) || stack_b == NULL)
-		return;
+		return ;
 	tmp = (*stack_b);
 	new = ft_lstnew((*stack_b)->val);
 	new->next = (*stack_a);
 	(*stack_a) = new;
 	(*stack_b) = (*stack_b)->next;
-	// free(tmp);
 }
 
 void	pb(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *new;
-	t_stack *tmp;
+	t_stack	*new;
+	t_stack	*tmp;
 
 	printf("pb\n");
 	tmp = (*stack_a);
@@ -64,5 +62,4 @@ void	pb(t_stack **stack_a, t_stack **stack_b)
 	new->next = (*stack_b);
 	(*stack_b) = new;
 	(*stack_a) = (*stack_a)->next;
-	// free(tmp);
 }

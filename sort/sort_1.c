@@ -1,17 +1,13 @@
 #include "../headers/push_swap.h"
 
-
 void	sort_2(t_stack **stack)
 {
-	int index;
 	if (look_for_themax(stack) == 0)
 		sa(stack);
 }
 
 void	sort_3(t_stack **stack)
 {
-	int index;
-
 	if (look_for_themax(stack) == 0)
 		ra(stack);
 	if (look_for_themax(stack) == 1)
@@ -86,6 +82,5 @@ void	main_sort(t_stack **stack_a, t_stack **stack_b)
 		sort_5(stack_a, stack_b);
 	else
 		sort_prime(stack_a, stack_b);
-
 	indexing(stack_a);
 }

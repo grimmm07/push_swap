@@ -1,10 +1,9 @@
 #include "../headers/push_swap.h"
 
-
 void	indexing(t_stack **lst)
 {
-	t_stack *tmp;
-	int indice;
+	t_stack	*tmp;
+	int		indice;
 
 	tmp = *lst;
 	indice = 0;
@@ -18,10 +17,10 @@ void	indexing(t_stack **lst)
 
 int	look_for_themin(t_stack **lst)
 {
-	t_stack *head;
-	t_stack *tmp;
-	int min;
-	int indice;
+	t_stack	*head;
+	t_stack	*tmp;
+	int		min;
+	int		indice;
 
 	head = *lst;
 	min = head->val;
@@ -40,10 +39,10 @@ int	look_for_themin(t_stack **lst)
 
 int	look_for_themax_indice(t_stack **lst)
 {
-	t_stack *head;
-	t_stack *tmp;
-	int indice;
-	int max;
+	t_stack	*head;
+	t_stack	*tmp;
+	int		indice;
+	int		max;
 
 	head = *lst;
 	max = 0;
@@ -62,10 +61,10 @@ int	look_for_themax_indice(t_stack **lst)
 
 int	look_for_themax(t_stack **lst)
 {
-	t_stack *head;
-	t_stack *tmp;
-	int max;
-	int indice;
+	t_stack	*head;
+	t_stack	*tmp;
+	int		max;
+	int		indice;
 
 	head = *lst;
 	max = 0;

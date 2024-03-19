@@ -8,12 +8,12 @@ void	print_stack(t_stack *a)
 		a = (a)->next;
 	}
 }
+
 int	main(int ac, char **av)
 {
 	t_stack	*a;
 	t_stack	*b;
 	t_stack	*tmp;
-
 
 	a = NULL;
 	b = NULL;
