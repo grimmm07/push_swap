@@ -25,6 +25,7 @@ int	*sort_arr(int *arr, int index)
 	int	i;
 	int	tmp;
 
+	i = 0;
 	while (i < index)
 	{
 		y = i + 1;

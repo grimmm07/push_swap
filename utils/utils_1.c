@@ -43,7 +43,6 @@ int	linkedlist_size(t_stack **stack)
 int	check_digit(char *arr)
 {
 	int	index;
-	int	y;
 
 	index = 0;
 	while (arr[index])

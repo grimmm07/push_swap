@@ -80,4 +80,5 @@ void	themin_to_thetop(t_stack **stack_a, t_stack **stack_b)
 	if (look_for_themin(stack_a) == 4)
 		rra(stack_a);
 	pb(stack_a, stack_b);
+	indexing(stack_a);
 }
