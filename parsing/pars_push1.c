@@ -7,7 +7,7 @@ void	arg_split(int ac, char **av, t_stack **stack_a)
 	int		y;
 
 	index = 1;
-	while (av[index])
+	while (index < ac)
 	{
 		y = 0;
 		arr = ft_split(av[index], 32);
@@ -18,7 +18,7 @@ void	arg_split(int ac, char **av, t_stack **stack_a)
 			stack_a = ft_lstadd_front(stack_a, ft_atoi(arr[y]));
 			y++;
 		}
-		free(arr);
+		ft_free_arr(arr , y);
 		index++;
 	}
 	indexing(stack_a);

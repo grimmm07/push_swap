@@ -25,4 +25,5 @@ int	main(int ac, char **av)
 		return (0);
 	}
 	main_sort(&a, &b);
+	// ft_free_li(a);
 }

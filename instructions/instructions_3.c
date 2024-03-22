@@ -3,10 +3,10 @@
 void	rra(t_stack **stack_a)
 {
 	t_stack	*tmp_last;
-	t_stack	*tmp_head;
 	t_stack	*tmp_newl;
 
-	tmp_head = *stack_a;
+	if (linkedlist_size(stack_a) < 2)
+		return ;
 	tmp_last = *stack_a;
 	while (tmp_last->next)
 	{
@@ -16,16 +16,16 @@ void	rra(t_stack **stack_a)
 	tmp_newl->next = NULL;
 	tmp_last->next = *stack_a;
 	*stack_a = tmp_last;
-	printf("rra\n");
+	ft_putstr("rra\n");
 }
 
 void	rrb(t_stack **stack_b)
 {
 	t_stack	*tmp_last;
-	t_stack	*tmp_head;
 	t_stack	*tmp_newl;
 
-	tmp_head = *stack_b;
+	if (linkedlist_size(stack_b) < 2)
+		return ;
 	tmp_last = *stack_b;
 	while (tmp_last->next)
 	{
@@ -35,12 +35,12 @@ void	rrb(t_stack **stack_b)
 	tmp_newl->next = NULL;
 	tmp_last->next = *stack_b;
 	*stack_b = tmp_last;
-	printf("rrb\n");
+	ft_putstr("rrb\n");
 }
 
 void	rrr(t_stack **stack_a, t_stack **stack_b)
 {
-	printf("rrr\n");
 	rra(stack_a);
 	rrb(stack_b);
+	ft_putstr("rrr\n");
 }

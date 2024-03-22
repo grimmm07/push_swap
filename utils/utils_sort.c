@@ -96,5 +96,6 @@ void	get_chunk(t_stack **stack_a, t_stack **stack_b, int *arr)
 		else
 			ra(stack_a);
 	}
+	free(arr);
 	indexing(stack_b);
 }
